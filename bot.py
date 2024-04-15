@@ -80,9 +80,9 @@ def signin():
     time.sleep(1.25)
     driver.find_element_by_xpath('//*[@id="root"]/div/header/div/div[2]/div[2]/div/div[1]/a').click()  # Click "log in"
     time.sleep(0.75)
-    driver.find_element_by_xpath('//*[@id="username"]').send_keys("# put your usename here")
+    driver.find_element_by_xpath('//*[@id="username"]').send_keys("#joine my team")
     time.sleep(0.75)
-    driver.find_element_by_xpath('//*[@id="password"]').send_keys("# put your password here")
+    driver.find_element_by_xpath('//*[@id="password"]').send_keys("#XD1234")
     time.sleep(0.75)
     driver.find_element_by_xpath('//*[@id="root"]/div/div/main/div/section/div/div[2]/div/form/button').click()
     time.sleep(0.75)
@@ -147,7 +147,7 @@ while True:
         add_nitro(lowered_list)
     else:
         pass
-    target_wpm = random.randint(150, 175) #change numbers inside to change speed of how fast the bot types for you
+    target_wpm = random.randint(,175) #change numbers inside to change speed of how fast the bot types for you
     deviation = 0
     get_time = get_sleep_time(target_wpm, deviation)
     for char in lowered_list:
