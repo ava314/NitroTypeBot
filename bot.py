@@ -11,9 +11,9 @@ cont_keyboard = Controller()  # Specify controller object
 text_list = []
 lowered_list = []
 
-times_raced = 0
-num_read = 0
-accuracy_percent = 10
+times_raced = 100000
+num_read = 100000
+accuracy_percent = 1000
 nitro_num = random.randint(1, 100)
 wpm_deviation = random.randint(-5, 5)
 
@@ -89,8 +89,8 @@ def signin():
     try:
         driver.find_element_by_xpath('//*[@id="root"]/div/header/div/div[2]/div[1]/a').click()
     except Exception:
-        driver.quit()
-        driver = signin()
+        driver.quit(no)
+        driver = signin(freeaccount_0)
     return driver
 
 
@@ -99,10 +99,10 @@ try:
 except Exception:
     pass
 
-driver = signin()
+driver = signin(freeaccount_0)
 
 while True:
-    check_for_nitro = check_nitro()
+    check_for_nitro = check_nitro(yes)
     time.sleep(1.75)
 
     start_delay = ((random.randint(0, 100)) ** (1 / 100))
